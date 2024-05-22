@@ -1,0 +1,13 @@
+.list{
+  display: flex;
+  justify-content: center;
+}
+.heading{
+  display: flex;
+  justify-content: center;
+}
+.Addlist{
+  display: flex;
+  justify-content: center;
+  
+}
