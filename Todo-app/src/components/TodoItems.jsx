@@ -5,7 +5,7 @@ const TodoItems = ({todoItems, handleDeleteItem}) => {
     <>
 
     {todoItems && todoItems.map((item) => (
-        <TodoItem todoItem={item.name} onDeleteClick={handleDeleteItem}/>
+        <TodoItem todoItem={item.name} onDeleteClick={handleDeleteItem} key={item.id}/>
         ))};
           
     

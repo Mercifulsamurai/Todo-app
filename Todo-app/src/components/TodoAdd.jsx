@@ -1,21 +1,23 @@
 import { useState } from "react";
 
 function TodoAdd ({handleNewItem} ) {
-    const [todoname, setTodoName] = useState();
+    const [todoName, setTodoName] = useState();
 
     const handleNameChange = (e) => {
         setTodoName(e.target.value)
+
         //  console.log(e.target.value)
     }
     const handleAddButtonClicked= () => {
      
-        handleNewItem(todoname)
-        setTodoName()
+        handleNewItem(todoName);
+        setTodoName("")
+        // todoName();
     }
     return (
         <>
         <div className="Addlist">
-        <input type="text"  onChange={handleNameChange} />
+        <input type="text" value={todoName} onChange={handleNameChange} />
         <button onClick={handleAddButtonClicked}>Add</button>
         </div>
         </>
