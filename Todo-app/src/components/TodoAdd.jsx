@@ -1,4 +1,8 @@
 import { useState } from "react";
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+import SendIcon from '@mui/icons-material/Send';
+
 
 function TodoAdd ({handleNewItem} ) {
     const [todoName, setTodoName] = useState();
@@ -17,8 +21,12 @@ function TodoAdd ({handleNewItem} ) {
     return (
         <>
         <div className="Addlist">
-        <input type="text" value={todoName} onChange={handleNameChange} />
-        <button onClick={handleAddButtonClicked}>Add</button>
+        <TextField id="standard-basic" label="TO-DO" variant="standard" value={todoName} onChange={handleNameChange} />
+        <Button variant="contained" endIcon={<SendIcon />} onClick={handleAddButtonClicked}>
+Add
+</Button>
+       
+     
         </div>
         </>
     );

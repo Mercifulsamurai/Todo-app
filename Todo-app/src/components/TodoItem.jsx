@@ -1,13 +1,15 @@
 
 
-function TodoItem({todoItem, onDeleteClick}) {
+function TodoItem({todoItem, onDeleteClick, removeL}) {
 
 
     return(
         <div className="list">
-        <div>{todoItem}</div>
-        <button onClick={() => onDeleteClick(todoItem)}>Delete</button>
+        <h3 class="items">{todoItem}</h3>
+        <img id="logo" src={removeL} onClick={() => onDeleteClick(todoItem)} />
+       
       </div>
+    
     )
 }
 
